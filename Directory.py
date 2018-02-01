@@ -9,3 +9,10 @@ def walk(rootZip, rootDir, keywords):
         for file in files:
             if file.endswith(".txt"):
                 ManagementFile.manager(rootZip, os.path.join(root, file), keywords)
+
+def getDirFiles(filePath):
+    listPath = filePath.split("\\")
+    path = ""
+    for i in range(len(listPath) - 1):
+        path += listPath[i] + "/"
+    return path
