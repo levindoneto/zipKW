@@ -17,3 +17,6 @@ def compressFolder(rootZip):
 	    for filename in files:
 	        zipFile.write(os.path.join(dirname, filename))
 	zipFile.close()
+
+def deleteUnzip(rootZip):
+	shutil.rmtree(rootZip.split(".")[0] + "-data")

@@ -7,3 +7,5 @@ def manager(rootZip, keywords):
     Zip.extractZip(rootZip)
     rootDir = Directory.getRootDirName(rootZip)
     Directory.walk(rootZip, rootDir, keywords)
+    Zip.compressFolder(rootZip)
+    Zip.deleteUnzip(rootZip)
